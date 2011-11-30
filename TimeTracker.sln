@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.Web", "TimeTracker\TimeTracker.Web.csproj", "{7EBF59ED-F24F-45B2-BE03-E515A0F0E65B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.Service", "TimeTracker.Service\TimeTracker.Service.csproj", "{D2DCE59C-0713-4989-9500-4B2718D660B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.Web.Tests", "TimeTracker.Web.Tests\TimeTracker.Web.Tests.csproj", "{BC95CCC3-99C4-495A-979F-F40244425BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeTracker.Service.Tests", "TimeTracker.Service.Tests\TimeTracker.Service.Tests.csproj", "{F0FCEA54-1374-4B22-8D64-528F7F7392E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3D6FA032-2683-4C43-AE0F-9387D8F46559}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EBF59ED-F24F-45B2-BE03-E515A0F0E65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EBF59ED-F24F-45B2-BE03-E515A0F0E65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EBF59ED-F24F-45B2-BE03-E515A0F0E65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EBF59ED-F24F-45B2-BE03-E515A0F0E65B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2DCE59C-0713-4989-9500-4B2718D660B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2DCE59C-0713-4989-9500-4B2718D660B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2DCE59C-0713-4989-9500-4B2718D660B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2DCE59C-0713-4989-9500-4B2718D660B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC95CCC3-99C4-495A-979F-F40244425BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC95CCC3-99C4-495A-979F-F40244425BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC95CCC3-99C4-495A-979F-F40244425BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC95CCC3-99C4-495A-979F-F40244425BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0FCEA54-1374-4B22-8D64-528F7F7392E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0FCEA54-1374-4B22-8D64-528F7F7392E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0FCEA54-1374-4B22-8D64-528F7F7392E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0FCEA54-1374-4B22-8D64-528F7F7392E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F0FCEA54-1374-4B22-8D64-528F7F7392E6} = {3D6FA032-2683-4C43-AE0F-9387D8F46559}
+		{BC95CCC3-99C4-495A-979F-F40244425BEA} = {3D6FA032-2683-4C43-AE0F-9387D8F46559}
+	EndGlobalSection
+EndGlobal

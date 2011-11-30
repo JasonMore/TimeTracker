@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="sixteen columns timeTracker">
+    <div class="row"><h1>Time Tracker</h1></div>
+    <div class="currentTask">
+        <input id="taskName" type="text" data-bind="
+            value: taskName, 
+            click: taskNameClicked,
+            event: {blur: taskNameBlur}" />
+        <input data-bind="datepicker: taskDate" />
+        <label class="elapsedTime" data-bind="text:elapsedTimeText">
+        </label>
+        <div data-bind="attr: {class:buttonStyle }">
+            <a href="#" data-bind="
+                text: timeButtonText,
+                click: timeButtonClicked"></a>
+        </div>
+        <div class="projectName">
+            <select name="projectName" data-bind="options: projectNames, value: projectName, optionsCaption: 'Choose a project...'">
+            </select>
+            <a href="#" data-bind="click: addNewProject">Add...</a>
+        </div>
+    </div>
+    <div class="previousTasks sixteen columns">
+        <ul data-bind='template: {name: "taskTemplate", foreach: tasks}'>
+        </ul>
+    </div>
+</div>
+<script id='taskTemplate' type='text/x-jquery-tmpl'>
+        <li>
+            <div>
+                <input data-bind="value:name" /> - 
+                <select data-bind="options: projectNames, value: projectName, optionsCaption: 'Choose a project...'"></select>
+                <input data-bind="datepicker: taskDate" />
+                <input class="time" data-bind="value:startText" /> - 
+                <input class="time" data-bind="value:endText" /> - 
+                <span data-bind="text:elapsedTimeText" />
+            </div>
+        </li>
+</script>
+@{ Html.Telerik().Window()
+        .Name("addProjectWindow")
+        .Title("Add Project")
+        .Draggable(true)
+        .Modal(true)
+        .Visible(false)
+        .Buttons(b => b.Close())
+        .Content(@<text>
+    <p>
+        Add a project name
+    </p>
+    <input data-bind="value:newProjectName" type="text" />
+    <div class="dialog-buttons t-last">
+        <div class="button yes-delete add">
+            <a href="#" class="add">Add</a>
+        </div>
+        <div class="button">
+            <a href="#" class="cancel">Cancel</a>
+        </div>
+    </div>
+    </text>)
+        .Width(300)
+        .Height(150)
+        .Render();
+}
+@{Html.Telerik().ScriptRegistrar().Scripts(scripts => scripts
+        .Add("date.format.js")
+        .Add("date.js")
+        .Add("json2.js")
+        .Add("TimeTracker.js")
+    )
+    .jQuery(false)
+    .OnDocumentReady(
+    @<text> TimeTracker.init({ 
+        saveUrl: '@Url.Action("Save")',
+        getUrl: '@Url.Action("GetTracker")',
+        getProjectsUrl: '@Url.Action("GetProjects")'  
+    });
+    </text>     );
+}

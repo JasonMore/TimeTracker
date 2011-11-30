@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>TimeTracker</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    @(Html.Telerik().StyleSheetRegistrar()
+        .DefaultGroup(group => group
+            .Add("base.css")
+            .Add("skeleton.css")
+            .Add("layout.css")
+            .Add("telerik.common.css")
+            .Add("telerik.default.css")
+            .Add("themes\\base\\jquery-ui.css")
+        )
+     )
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="Images/favicon.ico">
+	<link rel="apple-touch-icon" href="Images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="Images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="Images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<div class="container">
+        @RenderBody()
+	</div>
+
+	<!-- JS
+	================================================== -->
+
+    @(Html.Telerik().ScriptRegistrar()
+        .DefaultGroup(group => group
+            .Add("jquery-1.7.js")
+            .Add("jquery.validate.js")
+            .Add("modernizr-2.0.6-development-only.js")
+            .Add("knockout-1.3.0beta.js")
+            .Add("knockout.mapping-latest.js")
+            .Add("date.format.js")
+            .Add("date.js")
+            .Add("jquery-ui-1.8.16.js")
+        )
+        .jQuery(false)
+    )
+
+
+@*	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="Scripts/jquery.validate.min.js"></script>
+	<script src="Scripts/tabs.js"></script>
+	<script src="Scripts/knockout-1.3.0beta.js"></script>
+    <script src="Scripts/date.format.js"></script>
+    <script src="Scripts/date.js"></script>
+
+	<script src="Scripts/TimeTracker.js"></script>
+
+    
+    <script type="text/javascript">
+        $(function () {
+            TimeTracker.init();
+        });
+    </script>*@
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
